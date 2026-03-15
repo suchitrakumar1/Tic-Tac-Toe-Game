@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
@@ -11,15 +12,81 @@ body {
 }
 
 .game-name {
-    font-size: xx-large;
+    font-size: 50px;
     color: white;
     font-weight: bold;
-    font-family: sans-serif;
+
     text-align: center;
-    padding: 40px 0px;
+    padding: 20px;
 }
 
-@media (max-width: 375px) {
+.reset-section {
+    text-align: center;
+    padding: 10px;
+
+}
+
+.reset-btn {
+    padding: 10px 40px;
+    font-size: large;
+    letter-spacing: 3px;
+    border: none;
+    border-radius: 3px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    transition: all 0.3s ease-in-out .7ms;
+}
+
+.reset-btn:hover {
+    background-color: yellow;
+    color: black;
+
+}
+
+.box {
+    height: 110px;
+    width: 110px;
+    font-size: 60px;
+    background-color: transparent;
+    border: 1px solid white;
+    transition: all 0.3s ease-in-out .7ms;
+    color: white;
+}
+
+.box:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    gap: 10px;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+.boxes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.winner-section {
+    padding: 10px;
+    width: 320px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: x-large;
+    color: white;
+    font-weight: normal;
+    color: white;
+    letter-spacing: 4px;
+}
+
+@media (max-width: 400px) {
     body {
         background-image: linear-gradient(to top, #000000, #5b2c2b, #b05d34, #eca521, #ffff00);
         min-height: 100vh;
@@ -27,7 +94,19 @@ body {
     }
 
     .game-name {
-     font-size: xx-large;
-     color: black;
+        font-size: xx-large;
+        color: black;
+    }
+
+    .reset-btn {
+        border: 1px solid black;
+        color: black;
+    }
+    .box {
+        border: 1px solid black;
+        color: black;
+    }
+    .winner-section{
+        color: whitesmoke;
     }
 }
