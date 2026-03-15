@@ -1,5 +1,33 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #000000, #5b2c2b, #b05d34, #eca521, #ffff00);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.game-name {
+    font-size: xx-large;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 40px 0px;
+}
+
+@media (max-width: 375px) {
+    body {
+        background-image: linear-gradient(to top, #000000, #5b2c2b, #b05d34, #eca521, #ffff00);
+        min-height: 100vh;
+        background-repeat: no-repeat;
+    }
+
+    .game-name {
+     font-size: xx-large;
+     color: black;
+    }
 }
