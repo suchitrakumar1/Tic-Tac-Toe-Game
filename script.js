@@ -23,22 +23,47 @@ boxes.forEach(box => {
             box.innerText = "o";
             turno = true;
         }
+        box.disabled = true;
         checkwinner();
     })
 
 });
 const checkwinner = () => {
-    console.log("the functon is on");
     for (let patterns of winPatterns) {
         let pos1val = boxes[patterns[0]].innerText;
-        console.log(pos1val);
         let pos2val = boxes[patterns[1]].innerText;
-        console.log(pos2val);
-        let pos3val = boxes[patterns[1]].innerText;
-        console.log(pos3val);
-        if (pos1val !== "" && pos1val === pos2val && pos2val === pos3val) {
-            console.log("Winner is", pos1);
+        let pos3val = boxes[patterns[2]].innerText;
+        if (pos2val != "" && pos2val != "" && pos3val != "") {
+            if (pos1val === pos2val && pos2val === pos3val) {
+                console.log("winner", pos1val);
+                showWiner(pos1val);
+                
+            }
         }
     }
-    // let pos1val = boxes[winPatterns[0]];
+}
+let selement = document.querySelector(".winner-section");
+const showWiner = (pos1val) => {
+    selement.innerText = "The Winner Is " + pos1val;
+    selement.classList.remove("hide");
+    disabledbtn();
+}
+let reset = document.querySelector(".reset-btn");
+reset.addEventListener("click",()=>{
+    for (const box of boxes) {
+        box.innerText = "";
+        enabledbtn();
+        selement.classList.add("hide");
+        turno = true
+    }
+})
+const disabledbtn=()=>{
+    for (const box of boxes) {
+        box.disabled=true;
+    }
+}
+const enabledbtn=()=>{
+    for (const box of boxes) {
+        box.disabled=false;
+    }
 }
