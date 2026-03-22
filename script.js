@@ -53,7 +53,7 @@ reset.addEventListener("click",()=>{
     for (const box of boxes) {
         box.innerText = "";
         enabledbtn();
-        selement.classList.add("hide");
+        selement.classList.add("hide");s
         turno = true
     }
 })
